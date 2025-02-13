@@ -3,9 +3,8 @@
 #include <cstdlib>
 #include <iomanip>
 #include <fstream>
-
 using namespace std;
-
+//taking constant size of the grid of 9
 const int table_size = 9;
 
 // Function to print Sudoku grid
@@ -157,7 +156,7 @@ void save_score(int count) {
             players[i - 1] = tempPlayer;
         }
     }
-
+//opening the file
     ofstream outfile("scores.txt");
     for (int i = 0; i < 3; i++) {
         outfile << scores[i] << " " << players[i] << endl;
@@ -209,9 +208,9 @@ void start_game(int sudokuGrid[9][9], int& curr_score) {
         }
     }
 }
-
+//main function
 int main() {
-    system("color A5");
+    system("color A5");           //use for the colouring, other name can be used
 
     ifstream scorefile;
     int choice;
